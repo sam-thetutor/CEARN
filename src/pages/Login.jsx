@@ -1,12 +1,16 @@
 import { NFIDLogin } from 'ic-auth'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
 
+    const navigate = useNavigate()
     const handleLogin = async()=>{
 
         const res = await NFIDLogin()
         console.log("dddd :",res);
+        navigate("dashboard")
+
         
 
     }
